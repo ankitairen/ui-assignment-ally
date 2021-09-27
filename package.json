@@ -1,0 +1,66 @@
+{
+  "name": "ui-task-ally",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.1",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "npm run start:dev",
+    "start:dev": "npm run clear_cache:eslint && react-scripts start",
+    "clear_cache:eslint": "rm -rf node_modules/.cache/eslint-loader",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "precommit": "lint-staged",
+    "postcommit": "git update-index --again",
+    "format": "prettier --write \"./**/*.{js,jsx,json}\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
+      "prettier --write",
+      "eslint"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "2.2.1"
+  }
+}

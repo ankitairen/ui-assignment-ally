@@ -1,0 +1,125 @@
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  margin: 0 10px 0 5px;
+}
+
+.wrapper {
+  color: #697488;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.tree {
+  margin-top: 10px;
+  position: relative;
+  padding-left: 25px;
+  background-color: #ffffff;
+  margin-left: 10px;
+}
+  
+.tree ul {
+  list-style: none;
+  padding: 0 0 0 5px;
+}
+  
+.tree ul li {
+  padding: 7px 0 7px 15px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+  
+.tree ul li .childNode:before {
+  content: "";
+  height: 1px;
+  width: 10px;
+  background-color: #b4b4b4;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  margin: auto;
+}
+  
+  .tree ul li .childNode:after {
+    content: "";
+    width: 1px;
+    height: 90px;
+    background-color: #b4b4b4;
+    position: absolute;
+    top: -20px;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .tree ul li:last-child {
+    margin-bottom: 14px;
+  }
+  
+  .tree ul li:last-child,
+  .tree ul li:last-child:after {
+    height: 36px;
+  }
+  
+  .tree ul li .fa {
+    color: #b4b4b4;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 12px;
+  }
+  
+  .tree ul li .fa-icon-class {
+    margin-left: 18px;
+  }
+  
+  .tree ul li .fa.arrow {
+    position: absolute;
+    left: -18px;
+    top: 2px;
+  }
+  
+  .tree ul li .fa:hover {
+    color: #777;
+  }
+  
+  .tree ul li .node {
+    display: block;
+    cursor: pointer;
+    color: #737373;
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    height: 40px;
+  }
+  
+  .tree ul li .node:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    background-color: #f1f4f5;
+    border-radius: 3px;
+    z-index: -1;
+    display: none;
+  }
+  
+  .tree ul li .node:hover:before {
+    display: block;
+  }
+  
+  .tree ul li .node:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .tree ul li .node .titleClass {
+    margin-left: 8px;
+  }

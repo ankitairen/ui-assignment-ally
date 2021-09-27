@@ -1,0 +1,43 @@
+{
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "prettier"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "plugins": [
+      "react", "react-hooks", "prettier"
+    ],
+    "rules": {
+      "react/prop-types": 1,
+      "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+      "prettier/prettier": ["warn"]
+    },
+    "globals": {
+      "window": true,
+      "document": true,
+      "localStorage": true,
+      "FormData": true,
+      "FileReader": true,
+      "Blob": true,
+      "navigator": true
+    }
+  }
